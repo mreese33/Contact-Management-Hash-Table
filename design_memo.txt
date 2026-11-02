@@ -1,0 +1,20 @@
+Design Memo - Contact Management Hash Table
+
+For this assignment, I created a contact management system using a hash table to store names and 
+phone numbers. I think a hash table is a good choice for this system because it allows contacts 
+to be found quickly without having to search through every single name. Instead of checking each 
+contact one by one, the hash function takes the contact's name and converts it into an index 
+where the information is stored. This makes searching much more efficient, especially when the 
+number of contacts increases.
+
+One problem I had to account for was collisions. A collision happens when two different names 
+end up having the same index in the hash table. To handle this, I used separate chaining with 
+linked lists. Each index can hold multiple nodes, so contacts can still be stored even if they 
+share the same index. I tested this using Amy and May, which both ended up at index 5. I also 
+tested duplicate names to make sure the phone number updated instead of creating another contact.
+
+I think an engineer would choose a hash table over a regular list when they need to search for
+ information frequently and quickly. Lists are useful for smaller amounts of data, but searching 
+ can take longer as more items are added. Trees can be useful when data needs to stay organized 
+ in a specific order. However, for a contact management system where finding a name quickly is the
+ main goal, I think a hash table is the better option.
